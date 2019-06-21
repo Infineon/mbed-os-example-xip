@@ -1,6 +1,5 @@
 # Overview
-This example demonstrates the Execute-In-Place (XIP) feature of PSoC 6 MCU using the SMIF block. In this example, a function is placed and executed from the external memory.
-The function increments a set of integers and then prints on to a UART terminal.
+This example demonstrates the Execute-In-Place (XIP) feature of PSoC 6 MCU using the SMIF block. In this example, a function is placed and executed from external QSPI memory. The function increments a set of integers and then prints on to a UART terminal.
 
 # Operation
 
