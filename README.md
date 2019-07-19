@@ -61,5 +61,4 @@ The LED1 (Red LED) on the kit blinks every 1s.
 | Version | Description                                 |
 | ------- | --------------------------------------------|
 | 1.0     |Initial release. Tested with mbed-os v5.12   |
-| ------- | --------------------------------------------|
 | 1.10     |Updated to Mbed OS v5.13.0. **Note:** This example does not work with  Mbed OS v5.13.1. This will be addressed in future updates.   |
