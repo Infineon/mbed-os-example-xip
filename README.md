@@ -18,9 +18,9 @@ This example demonstrates the Execute-In-Place (XIP) feature of PSoC 6 MCU using
 
 	KitProg3 (v1.11 or later) supports programming of external memory via DAPLink tool. Update the KitProg on your board to support this feature. Refer to Firmware-loader[https://github.com/cypresssemiconductorco/Firmware-loader] to help you with the update process.
 		
-	Switch to DAPLink mode to program the project on to your board and enter the following command in your command prompt.
-	
-	```
+Switch to DAPLink mode to program the project on to your board and enter the following command in your command prompt.
+
+  ```
 	mbed compile -m CY8CPROTO_062_4343W -t GCC_ARM -f
   ```
 	
