@@ -16,23 +16,14 @@ This example demonstrates the Execute-In-Place (XIP) feature of PSoC 6 MCU using
   ```
 3. Programming  
 
-	Since programming the external memory is currently not supported by DAPLink, a programming tool such as [Cypress Programmer](https://www.cypress.com/products/psoc-programming-solutions) is required for this example.
-	Below steps shows programming using Cypress Programmer:  
+	KitProg3 (v1.11 or later) supports programming of external memory via DAPLink tool. Update the KitProg on your board to support this feature. Refer to Firmware-loader[https://github.com/cypresssemiconductorco/Firmware-loader] to help you with the update process.
+		
+	Switch to DAPLink mode to program the project on to your board and enter the following command in your command prompt.
 	
-	 **a**. Switch from **DAPLink** mode to **KitProg** mode.  
-		For single-button kits (CY8CPROTO_062_4343W) press button SW3 (MODE) for more than 2 seconds and release.  
-		For two-button kits (CY8CKIT_062_BLE and CY8CKIT_062_WIFI_BT) press and release button SW4 (CUSTOM APP).  
-	 
-	 **b**. From Cypress Programmer, browse to the hex file location:  
-	 
-			..\BUILD\CY8CPROTO_062_4343W\GCC_ARM\mbed-os-example-xip.hex  
-			
-	 **c**. In the Probe Settings, check the **External Memory** so as to enable external memory programming.  
-	 
-	 **d**. Click on the **Connect** button and then click **Program**.  
-	 
-	 ![Cypress Programmer](cyp.png)  
-	 
+	```
+	mbed compile -m CY8CPROTO_062_4343W -t GCC_ARM -f
+  ```
+	
 4. Enter the following command to connect to the UART terminal.
 
   ```
@@ -61,4 +52,4 @@ The LED1 (Red LED) on the kit blinks every 1s.
 | Version | Description                                 |
 | ------- | --------------------------------------------|
 | 1.0     |Initial release. Tested with mbed-os v5.12   |
-| 1.10     |Updated to Mbed OS v5.13.0. **Note:** This example does not work with  Mbed OS v5.13.1. This will be addressed in future updates.   |
+| 1.10     |Updated to Mbed OS v5.13.0. **Note:** This example does not work with  Mbed OS v5.13.1. This will be addressed in future updates. Added support for programming external memory via DAPLink  |
