@@ -1,12 +1,9 @@
 /******************************************************************************
-* File Name:   main.c
+* File Name:   xip_blinky_app.h
 *
-* Description:
-*   This example demonstrates the Execute-In-Place (XIP) feature of PSoC 6 MCU 
-*   using the SMIF block. In this example, an application which blinks an LED
-*   executes from external QSPI memory. User can change the LED blinking rate
-*   (1 Hz or 4 Hz) using the user button.
-*
+* Description: This file contains declaration of functions related to 
+* xip_blinky_app.cpp.
+*  
 * Related Document: See Readme.md
 *
 *
@@ -42,40 +39,10 @@
 * indemnify Cypress against all liability.
 *******************************************************************************/
 
-
 /*******************************************************************************
-* Header files including
+* Function Prototypes
 ********************************************************************************/
-#include "mbed.h"
-#include "xip_blinky_app.h"
+void led_blink_external_memory(void);
 
-/*****************************************************************************
-* Function Name: main
-******************************************************************************
-* Summary:
-*  Main function that starts an RTOS thread and switches the program 
-* (LED blinky) execution to external flash.
-*
-* Parameters:
-*  none
-*
-* Return:
-*  int
-*****************************************************************************/
-int main(void)
-{
-   
-    /* "\x1b[2J\x1b[;H" - ANSI ESC sequence for clear screen. */
-    printf("\x1b[2J\x1b[;H");
-    printf("Mbed OS Example - PSoC 6 MCU External Flash Access in XIP Mode \r\n");
-    
-    /* Call LED blinky application placed in external flash. */    
-    led_blink_external_memory();
-
-    for(;;)
-    {
-
-    }
-}
 
 /* [] END OF FILE */
